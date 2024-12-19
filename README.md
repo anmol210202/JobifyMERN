@@ -1,6 +1,6 @@
 # Jobify - Job Manager
 
-[Jobify](https://jobifymern-wpm8.onrender.com) is a powerful job management tool designed for individuals and teams to **list jobs**, **track progress**, and **manage job-related tasks** efficiently. Whether you're a job seeker or an employer, Jobify helps you stay organized, track your job applications, and manage your career growth.
+[Jobify](https://jobify.live/) is a powerful job management tool designed for individuals and teams to **list jobs**, **track progress**, and **manage job-related tasks** efficiently. Whether you're a job seeker or an employer, Jobify helps you stay organized, track your job applications, and manage your career growth.
 
 ## 🚀 Features
 
@@ -30,7 +30,6 @@ Follow these steps to set up and run the project on your local machine:
 git clone https://github.com/anmol210202/JobifyMERN.git
 cd JobifyMERN
 ```
-
 ### 2. Install Dependencies
 
 Run the following command to install all the necessary dependencies:
@@ -38,7 +37,6 @@ Run the following command to install all the necessary dependencies:
 ```bash
 npm run setup-project
 ```
-
 This command will install dependencies for both the server and the client.
 
 ### 3. Start the Development Server
@@ -49,7 +47,7 @@ To run both the client and the server locally, use the following command:
 npm run dev
 ```
 
-This will start the server and the client concurrently. The server will run on
+This will start the server and the client concurrently. The server will run on 
 [http://localhost:5100](http://localhost:5100) and the client will run on [http://localhost:5173](http://localhost:5173).
 
 ### 4. Environment Variables
