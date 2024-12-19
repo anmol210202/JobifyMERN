@@ -37,10 +37,6 @@ Run the following command to install all the necessary dependencies:
 ```bash
 npm run setup-project
 ```
-
-```bash
-npm run setup-project
-```
 This command will install dependencies for both the server and the client.
 
 ### 3. Start the Development Server
@@ -50,15 +46,17 @@ To run both the client and the server locally, use the following command:
 ```bash
 npm run dev
 ```
-This will start the server and the client concurrently. The server will run on http://localhost:5100 and the client will run on http://localhost:5173.
+
+This will start the server and the client concurrently. The server will run on 
+[http://localhost:5100](http://localhost:5100) and the client will run on [http://localhost:5173](http://localhost:5173).
 
 ### 4. Environment Variables
 
-Make sure to create a .env file in the root directory and add the following variables (or update them based on your project needs):
+Make sure to create a `.env` file in the root directory and add the following variables (or update them based on your project needs):
 
 ```bash
 NODE_ENV=development   # Set to 'production' for production environment
-PORT=5000              # Port for the server to run on
+PORT=5100              # Port for the server to run on
 MONGO_URL=<your_mongo_connection_string>  # MongoDB connection URL
 JWT_SECRET=<your_jwt_secret>  # Secret key for JWT authentication
 JWT_EXPIRES_IN=1d      # JWT token expiration time (e.g., '1d', '1h')
@@ -67,11 +65,11 @@ CLOUD_API_KEY=<your_cloudinary_api_key>  # Cloudinary API key
 CLOUD_API_SECRET=<your_cloudinary_api_secret>  # Cloudinary API secret
 ```
 
-Make sure to replace the placeholders (<your_mongo_connection_string>, <your_jwt_secret>, etc.) with your actual values.
+Make sure to replace the placeholders (`<your_mongo_connection_string>`, `<your_jwt_secret>`, etc.) with your actual values.
 
 ### 5. Visit the Application
 
-Open your browser and navigate to http://localhost:5173 to see the application in action!
+Open your browser and navigate to [http://localhost:5173](http://localhost:5173) to see the application in action!
 
 ## 📜 Scripts
 
@@ -81,7 +79,9 @@ Open your browser and navigate to http://localhost:5173 to see the application i
 - `npm run dev`: Starts both the backend and frontend concurrently.
 
 ## 🤝 Contributing
-Contributions are welcome! If you want to improve this project, feel free to fork the repository, make changes, and submit a pull request. Please follow the contributing guidelines.
+
+**Contributions are welcome!** If you want to improve this project, feel free to **fork the repository**, make changes, and **submit a pull request**. Please follow the **contributing guidelines**.
 
 ## 💬 Contact
-If you have any questions, feel free to reach out to me at anmol.s20@iiits.in.
+
+If you have any questions, feel free to reach out to me at [anmol.s20@iiits.in](mailto:anmol.s20@iiits.in).
