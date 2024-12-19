@@ -75,10 +75,10 @@ Open your browser and navigate to http://localhost:5173 to see the application i
 
 ## 📜 Scripts
 
-npm run setup-project: Installs all dependencies for both the server and the client.
-npm run server: Starts the backend server using nodemon.
-npm run client: Starts the frontend React app using Vite.
-npm run dev: Starts both the backend and frontend concurrently.
+- `npm run setup-project`: Installs all dependencies for both the server and the client.
+- `npm run server`: Starts the backend server using `nodemon`.
+- `npm run client`: Starts the frontend React app using Vite.
+- `npm run dev`: Starts both the backend and frontend concurrently.
 
 ## 🤝 Contributing
 Contributions are welcome! If you want to improve this project, feel free to fork the repository, make changes, and submit a pull request. Please follow the contributing guidelines.
