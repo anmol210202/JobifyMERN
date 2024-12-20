@@ -1,7 +1,7 @@
 import { Form, redirect, Link } from "react-router-dom";
 import { FormRow, Logo, SubmitBtn } from "../components";
 import Wrapper from "../assets/wrappers/RegisterAndLoginPage";
-import customFetch from "../utils/custonFetch";
+import customFetch from "../utils/customFetch";
 import { toast } from "react-toastify";
 
 // form but from router-dom compatible with ACTION

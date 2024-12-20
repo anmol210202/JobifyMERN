@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 import { JobsContainer, SearchContainer } from "../components";
-import customFetch from "../utils/custonFetch";
+import customFetch from "../utils/customFetch";
 import { useLoaderData } from "react-router-dom";
 import { useContext, createContext } from "react";
 
@@ -27,9 +27,9 @@ export const loader = async ({ request }) => {
 const AllJobsContext = createContext();
 
 const AllJobs = () => {
-  const { data , searchValues} = useLoaderData();
+  const { data, searchValues } = useLoaderData();
   return (
-    <AllJobsContext.Provider value={{ data ,searchValues }}>
+    <AllJobsContext.Provider value={{ data, searchValues }}>
       <SearchContainer />
       <JobsContainer />
     </AllJobsContext.Provider>

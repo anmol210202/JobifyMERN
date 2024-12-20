@@ -4,7 +4,6 @@ import App from './App.jsx'
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer} from "react-toastify";
 import './index.css'
-// import customFetch from './utils/custonFetch.js'
 
 
 // const data = await customFetch.get("/test")

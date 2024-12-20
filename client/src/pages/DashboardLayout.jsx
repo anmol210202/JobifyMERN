@@ -1,8 +1,14 @@
-import { Outlet, redirect, useLoaderData, useNavigate } from "react-router-dom";
+import {
+  Outlet,
+  redirect,
+  useLoaderData,
+  useNavigate,
+  useNavigation,
+} from "react-router-dom";
 import Wrapper from "../assets/wrappers/Dashboard";
-import { BigSidebar, Navbar, SmallSidebar } from "../components";
+import { BigSidebar, Navbar, SmallSidebar, Loading } from "../components";
 import { createContext, useContext, useState } from "react";
-import customFetch from "../utils/custonFetch";
+import customFetch from "../utils/customFetch";
 import { toast } from "react-toastify";
 
 export const loader = async () => {
@@ -22,6 +28,8 @@ const DashboardLayout = ({ isDarkThemeEnabled }) => {
 
   // const user = { name: "john" };
   const navigate = useNavigate();
+  const navigation = useNavigation();
+  const isPageLoading = navigation.state === "loading"; // navigation provides
   const [showSidebar, setShowSidebar] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = useState(isDarkThemeEnabled);
 
@@ -61,7 +69,8 @@ const DashboardLayout = ({ isDarkThemeEnabled }) => {
           <div>
             <Navbar />
             <div className="dashboard-page">
-              <Outlet context={{ user }} />                 {/*use context is used in sub routes , we don't need context provider*/ }
+              {isPageLoading ? <Loading /> : <Outlet context={{ user }} />}
+              {/*use context is used in sub routes , we don't need context provider*/}
             </div>
           </div>
         </main>
