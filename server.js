@@ -32,8 +32,8 @@ cloudinary.config({
   api_secret: process.env.CLOUD_API_SECRET,
 });
 
-// Disable trust proxy
-app.set("trust proxy", false); // Fix for X-Forwarded-For issue
+// Enable trust proxy
+// app.set("trust proxy", true); // Fix for X-Forwarded-For issue
 
 //middleware
 if (process.env.NODE_ENV === "development") {
