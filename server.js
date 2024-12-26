@@ -10,7 +10,6 @@ import cloudinary from "cloudinary";
 import helmet from "helmet";
 import mongoSanitize from "express-mongo-sanitize";
 
-
 //importing routers
 import jobRouter from "./routes/jobRouter.js";
 import authRouter from "./routes/authRouter.js";
@@ -33,6 +32,9 @@ cloudinary.config({
   api_secret: process.env.CLOUD_API_SECRET,
 });
 
+// Disable trust proxy
+app.set("trust proxy", false); // Fix for X-Forwarded-For issue
+
 //middleware
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev")); // Detailed error middleware
@@ -44,7 +46,19 @@ app.use(express.static(path.resolve(__dirname, "./client/dist")));
 app.use(cookieParser());
 app.use(express.json());
 //security
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        imgSrc: ["'self'", "data:", "https://res.cloudinary.com"],
+        scriptSrc: ["'self'"], // Adjust other sources as needed
+        styleSrc: ["'self'", "'unsafe-inline'"], // Adjust as needed
+      },
+    },
+  })
+);
+
 app.use(mongoSanitize());
 // app.get("/", (req, res) => {
 //   res.send(__dirname);
