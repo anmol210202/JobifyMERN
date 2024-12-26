@@ -7,6 +7,9 @@ import morgan from "morgan";
 import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
 import cloudinary from "cloudinary";
+import helmet from "helmet";
+import mongoSanitize from "express-mongo-sanitize";
+
 
 //importing routers
 import jobRouter from "./routes/jobRouter.js";
@@ -38,15 +41,18 @@ if (process.env.NODE_ENV === "development") {
 // public folder
 app.use(express.static(path.resolve(__dirname, "./client/dist")));
 
-app.use(express.json());
 app.use(cookieParser());
-app.get("/", (req, res) => {
-  res.send(__dirname);
-});
+app.use(express.json());
+//security
+app.use(helmet());
+app.use(mongoSanitize());
+// app.get("/", (req, res) => {
+//   res.send(__dirname);
+// });
 
-app.get("/api/v1/test", (req, res) => {
-  res.json({ msg: "test route" });
-});
+// app.get("/api/v1/test", (req, res) => {
+//   res.json({ msg: "test route" });
+// });
 
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/jobs", authenticateUser, jobRouter); // we need to authenticate user before accessing jobs
