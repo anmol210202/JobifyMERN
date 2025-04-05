@@ -295,6 +295,22 @@ button:disabled {
   animation: spinner 0.6s linear infinite;
 }
 
+.loading-text {
+  color: #666;
+  font-style: italic;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.loading-text::after {
+  content: '...';
+  animation: pulse 1.5s infinite;
+}
+
 /* title */
 
 .title {
