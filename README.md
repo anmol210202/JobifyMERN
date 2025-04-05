@@ -9,11 +9,12 @@
 - **User Dashboard**: View and manage your job applications and progress in one place.
 - **Admin Panel**: For admins to manage job postings and user applications.
 - **Responsive Design**: Optimized for both desktop and mobile use.
+- **Language Chain Integration**: Use LangChain for natural language processing tasks within Jobify for landing Intro.
 
 ## 🛠️ Technologies Used
 
 - **Frontend**: React, Vite, Axios, CSS, React Router
-- **Backend**: Node.js, Express, MongoDB, JWT Authentication
+- **Backend**: Node.js, Express, MongoDB, JWT Authentication , langChain
 - **Database**: MongoDB
 - **Authentication**: JWT (JSON Web Tokens)
 - **File Storage**: Cloudinary for image and file uploads

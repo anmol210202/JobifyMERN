@@ -61,39 +61,7 @@ app.use(
 );
 
 app.use(mongoSanitize());
-// app.get("/", (req, res) => {
-//   res.send(__dirname);
-// });
 
-// app.get("/api/v1/test", (req, res) => {
-//   res.json({ msg: "test route" });
-// });
-
-// app.post('/api/v1/ai/generate-text', async (req, res) => {
-//   const DEFAULT_TEXT = `Tired of scattered job applications and missed opportunities? Take control of your career journey with our intuitive job tracker! Effortlessly organize your applications, track your progress, and manage important deadlines. Visualize your success, identify areas for improvement, and watch your career prospects grow. Let us help you land your dream job, one organized step at a time. Start tracking smarter today!`; // Your original text
-
-//   try {
-//     const model = new ChatGoogleGenerativeAI({
-//       model: "gemini-2.0-flash",
-//       apiKey: "AIzaSyBw3lrF_PSHxZP2FWPO731Ms1UbzTRxdnA",
-//     });
-
-//     const prompt = ChatPromptTemplate.fromMessages([
-//       ["system", "You are a helpful career advisor."],
-//       ["human", `Generate a short, engaging paragraph (50-70 words) for a job tracking application landing page.
-//         Focus on benefits like organization, career growth, and job management. Use professional but friendly tone.
-//         Avoid markdown formatting.`]
-//     ]);
-
-//     const chain = prompt.pipe(model).pipe(new StringOutputParser());
-
-//     const response = await chain.invoke({});
-//     res.json({ text: response });
-//   } catch (error) {
-//     console.error('AI Error:', error);
-//     res.json({ text: DEFAULT_TEXT });
-//   }
-// });
 app.use("/api/v1/ai", aiRouter);
 
 app.use("/api/v1/auth", authRouter);
