@@ -27,6 +27,9 @@ const Landing = () => {
               text
             )}
           </p>
+          <div className="ai-indicator">
+            <p className="text note">AI generated Intro| Refresh to see change.</p>
+          </div>
           <Link to="/register" className="btn register-link">
             Register
           </Link>

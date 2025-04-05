@@ -311,6 +311,17 @@ button:disabled {
   animation: pulse 1.5s infinite;
 }
 
+.ai-indicator {
+  margin-top: 5px;
+  text-align: left;
+}
+
+.note {
+  color: #888;
+  opacity: 0.7;
+  font-size: 12px;
+}
+
 /* title */
 
 .title {
